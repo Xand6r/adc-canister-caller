@@ -1,7 +1,7 @@
 use std::str::FromStr;
 
+use ic_cdk::println;
 use candid::Principal;
-use ic_cdk::{api::time, println};
 use types::PriceResponse;
 
 pub mod types;

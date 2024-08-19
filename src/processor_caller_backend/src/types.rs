@@ -51,11 +51,16 @@ pub struct CurrencyPair {
     /// the quote currency
     quote: String,
     /// the price aggregated from several sources
-    price: Option<f64>,
-    /// each price represents a different source
-    sources: Option<Vec<f64>>,
+    price: Option<InformationDetails>,
+    // TODO: add in other properties
     /// a string representation of the price pair "USDT/BTC"
     repr: String,
+}
+
+#[derive(Deserialize, Serialize, Clone, Debug, CandidType)]
+pub struct InformationDetails {
+    value: f64,
+    sources: Vec<f64>,
 }
 
 
