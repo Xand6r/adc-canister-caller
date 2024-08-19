@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/processor_caller_backend"
+]
+resolver = "2"

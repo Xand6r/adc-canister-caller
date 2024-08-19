@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "processor_caller_backend": {
+      "candid": "src/processor_caller_backend/processor_caller_backend.did",
+      "package": "processor_caller_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,19 @@
+type CurrencyPair = record {
+    base: text;
+    quote: text;
+    price: opt float64;
+    sources: opt vec float64;
+    repr: text;
+};
+
+type PriceResponse = record {
+    id: text;
+    owner: principal;
+    pairs: vec CurrencyPair;
+    processed: bool;
+};
+
+service : {
+    "submit_price_request": (text) -> (text);
+    "receive_price_response": (PriceResponse) -> ();
+}
